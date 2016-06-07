@@ -1,3 +1,5 @@
 {% for post in post_list %}
-    <h1> {{ post.title }} </h1>
+    <li>
+        <h1><a href="{% url 'blog:detail' post.pk %}">{{ post.title }}</a> {{ post.view }}</h1>
+    </li>
 {% endfor %}
